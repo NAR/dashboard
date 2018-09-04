@@ -1,23 +1,12 @@
 [0;32m===> Verifying dependencies...
 [0m[0;32m===> Compiling myapp
 [0m[0;32m===> Performing EUnit tests...
-[0m[0;32m.[0m[0;31mF[0m
-Failures:
+[0m[0;32m.[0m
 
-  1) myapp_test:wrok_test/0
-[0;31m     Failure/Error: {error,undef,
-                           [{myapp_app,wrong,[],[]},
-                            {myapp_test,wrok_test,0,[]}]}
-[0m[0;36m     Output: [0m
-
-
-Top 2 slowest tests (0.001 seconds, 1.6% of total time):
-  myapp_test:wrok_test/0
-[0;36m    0.001 seconds[0m
-  myapp_test:hello_test/0
+Top 1 slowest tests (0.000 seconds, 0.0% of total time):
+  myapp_test:hello_test/0: module 'myapp_test'
 [0;36m    0.000 seconds[0m
 
-Finished in 0.062 seconds
-[0;31m2 tests, 1 failures
-[0m[0;31m===> [1mError running tests
-[0m[0m
+Finished in 0.040 seconds
+[0;32m1 tests, 0 failures
+[0m
