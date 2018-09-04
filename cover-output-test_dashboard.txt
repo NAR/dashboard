@@ -1,0 +1,15 @@
+[0;32m===> Verifying dependencies...
+[0m[0;32m===> Compiling myapp
+[0m[0;32m===> Performing cover analysis...
+[0m  |------------------------|------------|
+  |                module  |  coverage  |
+  |------------------------|------------|
+  |             myapp_app  |      100%  |
+  |             myapp_sup  |      100%  |
+  |------------------------|------------|
+  |                 total  |      100%  |
+  |------------------------|------------|
+  coverage calculated from:
+    /home/nar/test_dashboard/_build/test/cover/eunit.coverdata
+    /home/nar/test_dashboard/_build/test/cover/ct.coverdata
+  cover summary written to: /home/nar/test_dashboard/_build/test/cover/index.html
