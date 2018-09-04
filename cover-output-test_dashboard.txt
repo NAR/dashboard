@@ -4,12 +4,12 @@
 [0m  |------------------------|------------|
   |                module  |  coverage  |
   |------------------------|------------|
-  |             myapp_app  |      100%  |
   |             myapp_sup  |      100%  |
+  |             myapp_app  |      100%  |
   |------------------------|------------|
   |                 total  |      100%  |
   |------------------------|------------|
   coverage calculated from:
-    /home/nar/test_dashboard/_build/test/cover/eunit.coverdata
-    /home/nar/test_dashboard/_build/test/cover/ct.coverdata
-  cover summary written to: /home/nar/test_dashboard/_build/test/cover/index.html
+    /home/travis/build/NAR/test_dashboard/_build/test/cover/eunit.coverdata
+    /home/travis/build/NAR/test_dashboard/_build/test/cover/ct.coverdata
+  cover summary written to: /home/travis/build/NAR/test_dashboard/_build/test/cover/index.html

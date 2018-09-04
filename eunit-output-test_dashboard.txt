@@ -1,12 +1,16 @@
 [0;32m===> Verifying dependencies...
 [0m[0;32m===> Compiling myapp
 [0m[0;32m===> Performing EUnit tests...
-[0m[0;32m.[0m
+[0mAttempting to start epmd...
+
+=INFO REPORT==== 4-Sep-2018::13:32:12 ===
+Protocol 'inet_tcp': register/listen error: econnrefused
+[0;32m.[0m
 
 Top 1 slowest tests (0.000 seconds, 0.0% of total time):
   myapp_test:hello_test/0: module 'myapp_test'
 [0;36m    0.000 seconds[0m
 
-Finished in 0.040 seconds
+Finished in 0.130 seconds
 [0;32m1 tests, 0 failures
 [0m
