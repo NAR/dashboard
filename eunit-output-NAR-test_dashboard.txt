@@ -3,7 +3,7 @@ Compiling myapp
 Performing EUnit tests...
 Attempting to start epmd...
 
-=INFO REPORT==== 6-Sep-2018::15:05:23 ===
+=INFO REPORT==== 6-Sep-2018::15:21:51 ===
 Protocol 'inet_tcp': register/listen error: econnrefused
 [0;32m.[0m
 
@@ -11,6 +11,6 @@ Top 1 slowest tests (0.000 seconds, 0.0% of total time):
   myapp_test:hello_test/0: module 'myapp_test'
 [0;36m    0.000 seconds[0m
 
-Finished in 0.110 seconds
+Finished in 0.124 seconds
 [0;32m1 tests, 0 failures
 [0m
