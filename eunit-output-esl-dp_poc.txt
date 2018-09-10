@@ -1,77 +1,75 @@
-[0;32m===> Verifying dependencies...
-[0m[0;32m===> Compiling dp_router
-[0mapps/dp_router/src/dp_router_server.erl:39: Warning: variable 'Nodes' is unused
+Verifying dependencies...
+Compiling dp_router
+apps/dp_router/src/dp_router_server.erl:39: Warning: variable 'Nodes' is unused
 
-[0;32m===> Compiling dp_dummy
-[0mapps/dp_dummy/src/dp_dummy.erl:25: Warning: function metrics_name/2 is unused
-
+Compiling dp_dummy
 apps/dp_dummy/src/dp_dummy_server.erl:70: Warning: function check_node/1 is unused
 
-[0;32m===> Compiling dp_loader
-[0m[0;32m===> Compiling dp
-[0mapps/dp/src/dp_sup.erl:18: Warning: type constraints_per_participant() is unused
+apps/dp_dummy/src/dp_dummy.erl:25: Warning: function metrics_name/2 is unused
+
+Compiling dp_loader
+Compiling dp
+apps/dp/src/dp_sup.erl:18: Warning: type constraints_per_participant() is unused
 
 _build/test/lib/dp/test/dp_metrics_SUITE.erl:11: Warning: export_all flag enabled - all functions will be exported
 
-[0;32m===> Compiling dp_shared_utils
-[0mapps/dp_shared_utils/src/dp_shared_utils_server.erl:54: Warning: variable 'Map' is unused
-
+Compiling dp_shared_utils
 apps/dp_shared_utils/src/dp_shared_utils.erl:56: Warning: variable 'Port' is unused
 
-[0;32m===> Performing EUnit tests...
-[0m/home/nar/dp_poc/_build/test/lib/dp/test/dp_constraint_tests.erl:23:<0.758.0>: Upper limit
-15:05:25.951 [info] Creating table fund on node ctnode9793@debian.
-15:05:25.953 [info] Creating table limit on node ctnode9793@debian.
-15:05:25.953 [info] initialising funds (Db: [true,true])
-15:05:25.951 [info] Application lager started on node ctnode9793@debian
-/home/nar/dp_poc/_build/test/lib/dp/test/dp_constraint_tests.erl:58:<0.758.0>: Lower limit
-[0;32m.[0m[0;32m.[0m
-=INFO REPORT==== 10-Sep-2018::15:05:25 ===
+apps/dp_shared_utils/src/dp_shared_utils_server.erl:54: Warning: variable 'Map' is unused
+
+Performing EUnit tests...
+/dp/_build/test/lib/dp/test/dp_constraint_tests.erl:23:<0.744.0>: Upper limit
+/dp/_build/test/lib/dp/test/dp_constraint_tests.erl:58:<0.744.0>: Lower limit
+[0;32m.[0m15:31:20.536 [info] Creating table fund on node ctnode360@c12ebfd9a5dd.
+15:31:20.539 [info] Creating table limit on node ctnode360@c12ebfd9a5dd.
+[0;32m.[0m15:31:20.539 [info] initialising funds (Db: [true,true])
+15:31:20.536 [info] Application lager started on node ctnode360@c12ebfd9a5dd
+
+=INFO REPORT==== 10-Sep-2018::15:31:20 ===
     application: lager
     exited: stopped
     type: permanent
-15:05:25.993 [error] Table fund already exists on ctnode9793@debian
-15:05:25.993 [error] Table limit already exists on ctnode9793@debian
-15:05:25.993 [info] initialising funds (Db: [true,true])
-15:05:25.993 [info] Application lager started on node ctnode9793@debian
-15:05:26.052 [info] Application elarm started on node ctnode9793@debian
-/home/nar/dp_poc/_build/test/lib/dp/test/dp_db_tests.erl:24:<0.789.0>: Test funds Db
-/home/nar/dp_poc/_build/test/lib/dp/test/dp_db_tests.erl:45:<0.789.0>: Test limit Db
-[0;32m.[0m/home/nar/dp_poc/_build/test/lib/dp/test/dp_db_tests.erl:76:<0.789.0>: Test elarm on zeroed balance
+15:31:20.582 [error] Table fund already exists on ctnode360@c12ebfd9a5dd
+15:31:20.582 [error] Table limit already exists on ctnode360@c12ebfd9a5dd
+15:31:20.582 [info] initialising funds (Db: [true,true])
+15:31:20.582 [info] Application lager started on node ctnode360@c12ebfd9a5dd
+15:31:20.622 [info] Application elarm started on node ctnode360@c12ebfd9a5dd
+/dp/_build/test/lib/dp/test/dp_db_tests.erl:24:<0.775.0>: Test funds Db
+/dp/_build/test/lib/dp/test/dp_db_tests.erl:45:<0.775.0>: Test limit Db
+[0;32m.[0m/dp/_build/test/lib/dp/test/dp_db_tests.erl:76:<0.775.0>: Test elarm on zeroed balance
 [0;32m.[0m[0;32m.[0m
-=INFO REPORT==== 10-Sep-2018::15:05:26 ===
+=INFO REPORT==== 10-Sep-2018::15:31:20 ===
     application: lager
     exited: stopped
     type: permanent
 
-=INFO REPORT==== 10-Sep-2018::15:05:26 ===
+=INFO REPORT==== 10-Sep-2018::15:31:20 ===
     application: elarm
     exited: stopped
     type: temporary
-15:05:26.154 [error] Table fund already exists on ctnode9793@debian
-15:05:26.154 [error] Table limit already exists on ctnode9793@debian
-15:05:26.154 [info] initialising funds (Db: [true,true])
-15:05:26.154 [info] Application lager started on node ctnode9793@debian
-15:05:26.258 [info] Connected nodes: []
-15:05:26.282 [error] Error calling remote node: {nodedown,dummynode}
-[0;32m.[0m15:05:26.388 [error] Error calling remote node: {nodedown,dummynode}
+15:31:20.714 [error] Table fund already exists on ctnode360@c12ebfd9a5dd
+15:31:20.714 [error] Table limit already exists on ctnode360@c12ebfd9a5dd
+15:31:20.714 [info] initialising funds (Db: [true,true])
+15:31:20.714 [info] Application lager started on node ctnode360@c12ebfd9a5dd
+15:31:20.774 [info] Connected nodes: []
+15:31:20.790 [error] Error calling remote node: {nodedown,dummynode}
+[0;32m.[0m15:31:20.894 [error] Error calling remote node: {nodedown,dummynode}
 [0;32m.[0m
-=INFO REPORT==== 10-Sep-2018::15:05:26 ===
+=INFO REPORT==== 10-Sep-2018::15:31:20 ===
     application: lager
     exited: stopped
     type: permanent
 [0;32m.[0m
 
-Top 8 slowest tests (0.238 seconds, 29.7% of total time):
+Top 8 slowest tests (0.219 seconds, 17.4% of total time):
   dp_protocol_tests:protocol_test_/0: Upper limit
-[0;36m    0.123 seconds[0m
+[0;36m    0.112 seconds[0m
   dp_protocol_tests:protocol_test_/0: Lower limit
-[0;36m    0.104 seconds[0m
+[0;36m    0.102 seconds[0m
   dp_db_tests:protocol_test_/0: Test elarm on zeroed balance
-[0;36m    0.009 seconds[0m
+[0;36m    0.004 seconds[0m
   dp_db_tests:protocol_test_/0: Test fund Db
-[0;36m    0.001 seconds[0m
-  dp_db_tests:protocol_test_/0: Test limit Db
 [0;36m    0.001 seconds[0m
   dp_constraint_tests:limit_test_/0: Upper limit
 [0;36m    0.000 seconds[0m
@@ -79,7 +77,9 @@ Top 8 slowest tests (0.238 seconds, 29.7% of total time):
 [0;36m    0.000 seconds[0m
   dp_constraint_tests:limit_test_/0: Lower limit
 [0;36m    0.000 seconds[0m
+  dp_db_tests:protocol_test_/0: Test limit Db
+[0;36m    0.000 seconds[0m
 
-Finished in 0.801 seconds
+Finished in 1.262 seconds
 [0;32m8 tests, 0 failures
 [0m

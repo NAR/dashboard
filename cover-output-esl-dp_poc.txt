@@ -1,0 +1,60 @@
+Verifying dependencies...
+Compiling dp_router
+apps/dp_router/src/dp_router_server.erl:39: Warning: variable 'Nodes' is unused
+
+Compiling dp_dummy
+apps/dp_dummy/src/dp_dummy_server.erl:70: Warning: function check_node/1 is unused
+
+apps/dp_dummy/src/dp_dummy.erl:25: Warning: function metrics_name/2 is unused
+
+Compiling dp_loader
+Compiling dp
+apps/dp/src/dp_sup.erl:18: Warning: type constraints_per_participant() is unused
+
+_build/test/lib/dp/test/dp_metrics_SUITE.erl:11: Warning: export_all flag enabled - all functions will be exported
+
+Compiling dp_shared_utils
+apps/dp_shared_utils/src/dp_shared_utils.erl:56: Warning: variable 'Port' is unused
+
+apps/dp_shared_utils/src/dp_shared_utils_server.erl:54: Warning: variable 'Map' is unused
+
+Performing cover analysis...
+  |--------------------------|------------|
+  |                  module  |  coverage  |
+  |--------------------------|------------|
+  |         dp_shared_utils  |        8%  |
+  |     dp_shared_utils_app  |        0%  |
+  |     dp_shared_utils_sup  |        0%  |
+  |  dp_shared_utils_server  |        0%  |
+  |               dp_db_ets  |       95%  |
+  |            dp_db_mnesia  |        0%  |
+  |             dp_protocol  |       35%  |
+  |                  dp_app  |       66%  |
+  |   dp_policy_halve_slack  |        0%  |
+  |               dp_policy  |        6%  |
+  |                  dp_sup  |      100%  |
+  |                      dp  |        0%  |
+  |           dp_constraint  |       73%  |
+  |                   dp_db  |       90%  |
+  |              dp_metrics  |       56%  |
+  |                 dp_util  |       74%  |
+  |       dp_loader_metrics  |        0%  |
+  |               dp_loader  |        0%  |
+  |           dp_loader_sup  |        0%  |
+  |           dp_loader_app  |        0%  |
+  |            dp_dummy_app  |        0%  |
+  |                dp_dummy  |        0%  |
+  |            dp_dummy_sup  |        0%  |
+  |         dp_dummy_server  |        0%  |
+  |           dp_router_app  |        0%  |
+  |               dp_router  |        0%  |
+  |        dp_router_server  |        0%  |
+  |           dp_router_sup  |        0%  |
+  |       dp_router_metrics  |        0%  |
+  |--------------------------|------------|
+  |                   total  |       31%  |
+  |--------------------------|------------|
+  coverage calculated from:
+    /dp/_build/test/cover/eunit.coverdata
+    /dp/_build/test/cover/ct.coverdata
+  cover summary written to: /dp/_build/test/cover/index.html

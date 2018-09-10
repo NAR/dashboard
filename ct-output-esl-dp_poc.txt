@@ -11,8 +11,16 @@ Compiling dp_loader
 Compiling dp
 apps/dp/src/dp_sup.erl:18: Warning: type constraints_per_participant() is unused
 
+_build/test/lib/dp/test/dp_metrics_SUITE.erl:11: Warning: export_all flag enabled - all functions will be exported
+
 Compiling dp_shared_utils
 apps/dp_shared_utils/src/dp_shared_utils.erl:56: Warning: variable 'Port' is unused
 
 apps/dp_shared_utils/src/dp_shared_utils_server.erl:54: Warning: variable 'Map' is unused
 
+Running Common Test suites...
+%%% dp_metrics_SUITE: Pinging dp_poc@c12ebfd9a5dd -> pang
+Pinging ctnode420@c12ebfd9a5dd -> pong
+.
+%%% dp_policy_SUITE: ..........
+All 11 tests passed.

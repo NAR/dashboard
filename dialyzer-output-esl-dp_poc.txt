@@ -1,83 +1,94 @@
-[0;32m===> Verifying dependencies...
-[0m[0;32m===> Compiling meck
-[0m[0;32m===> Compiling dashboard
-[0m[0;32m===> Compiling dp_router
-[0mapps/dp_router/src/dp_router_server.erl:39: Warning: variable 'Nodes' is unused
+Verifying dependencies...
+Fetching meck ({pkg,<<"meck">>,<<"0.8.6">>})
+Downloaded package, caching at /root/.cache/rebar3/hex/default/packages/meck-0.8.6.tar
+Linking _build/default/lib/elarm to _build/test/lib/elarm
+Linking _build/default/lib/exometer_core to _build/test/lib/exometer_core
+Linking _build/default/lib/gen_rpc to _build/test/lib/gen_rpc
+Linking _build/default/plugins/rebar3_hex to _build/test/plugins/rebar3_hex
+Linking _build/default/lib/lager to _build/test/lib/lager
+Linking _build/default/lib/folsom to _build/test/lib/folsom
+Linking _build/default/lib/goldrush to _build/test/lib/goldrush
+Linking _build/default/lib/hut to _build/test/lib/hut
+Linking _build/default/lib/parse_trans to _build/test/lib/parse_trans
+Linking _build/default/lib/ssl_verify_fun to _build/test/lib/ssl_verify_fun
+Linking _build/default/lib/bear to _build/test/lib/bear
+Compiling meck
+Compiling dp_router
+apps/dp_router/src/dp_router_server.erl:39: Warning: variable 'Nodes' is unused
 
-[0;32m===> Compiling dp_dummy
-[0mapps/dp_dummy/src/dp_dummy.erl:25: Warning: function metrics_name/2 is unused
-
+Compiling dp_dummy
 apps/dp_dummy/src/dp_dummy_server.erl:70: Warning: function check_node/1 is unused
 
-[0;32m===> Compiling dp_loader
-[0m[0;32m===> Compiling dp
-[0mapps/dp/src/dp_sup.erl:18: Warning: type constraints_per_participant() is unused
+apps/dp_dummy/src/dp_dummy.erl:25: Warning: function metrics_name/2 is unused
+
+Compiling dp_loader
+Compiling dp
+apps/dp/src/dp_sup.erl:18: Warning: type constraints_per_participant() is unused
 
 _build/test/lib/dp/test/dp_metrics_SUITE.erl:11: Warning: export_all flag enabled - all functions will be exported
 
-[0;32m===> Compiling dp_shared_utils
-[0mapps/dp_shared_utils/src/dp_shared_utils_server.erl:54: Warning: variable 'Map' is unused
-
+Compiling dp_shared_utils
 apps/dp_shared_utils/src/dp_shared_utils.erl:56: Warning: variable 'Port' is unused
 
-[0;32m===> Dialyzer starting, this may take a while...
-[0m[0;32m===> Updating plt...
-[0m[0;32m===> Resolving files...
-[0m[0;32m===> Updating base plt...
-[0m[0;32m===> Resolving files...
-[0m[0;32m===> Checking 166 files in "/home/nar/.cache/rebar3/rebar3_20.1_plt"...
-[0m[0;32m===> Copying "/home/nar/.cache/rebar3/rebar3_20.1_plt" to "/home/nar/dp_poc/_build/test/rebar3_20.1_plt"...
-[0m[0;32m===> Checking 166 files in "/home/nar/dp_poc/_build/test/rebar3_20.1_plt"...
-[0m[0;32m===> Adding 473 files to "/home/nar/dp_poc/_build/test/rebar3_20.1_plt"...
-[0m[0;32m===> Doing success typing analysis...
-[0m[0;32m===> Resolving files...
-[0m[0;32m===> Analyzing 29 files with "/home/nar/dp_poc/_build/test/rebar3_20.1_plt"...
-[0m
-[4mapps/dp/src/[0;36m[4mdp[0m[4m.erl[0m[0m
-[0;36m  46[0m: [1mThe call[0m dp:report_failure('debit', Participant::string(), Amount::number(), TxId::any(), Options::any(), [0;31mReject::{'reject',_}[0m) [0m[1mbreaks the contract[0m (request(), participant(), amount(), transaction_id(), options(), [0;32m{'rejected',term()}[0m) -> {'rejected',term()}[0m[0m
-[0;36m  56[0m: [1mThe call[0m dp:report_failure('credit', Participant::string(), Amount::integer(), TxId::any(), Options::any(), [0;31mReject::{'reject',_}[0m) [0m[1mbreaks the contract[0m (request(), participant(), amount(), transaction_id(), options(), [0;32m{'rejected',term()}[0m) -> {'rejected',term()}[0m[0m
-[0;36m  69[0m: [1mInvalid type specification for function[0m dp:report_failure/6.[1m The success typing is[0m ('credit' | 'debit',string(),number(),_,_,{'reject',_}) -> {'reject',_}[0m[0m
+apps/dp_shared_utils/src/dp_shared_utils_server.erl:54: Warning: variable 'Map' is unused
 
-[4mapps/dp/src/[0;36m[4mdp_app[0m[4m.erl[0m[0m
-[0;36m  22[0m: [1mThe inferred return type of[0m start/2 ({'stop',_}) [1mhas nothing in common with[0m {'error',_} | {'ok',pid()} | {'ok',pid(),_}, [1mwhich is the expected return type for the callback of[0m application [1mbehaviour[0m[0m
-[0;36m  56[0m: [1mThe call[0m dp_sup:start_link(NodeCandidates::[atom()], [0;31mPartsConstraints::[{'constraint',integer(),string(),'=<' | '>=',integer(),integer(),integer()}][0m) [0m[1mbreaks the contract[0m ([node()], [0;32m{dp:participant(),dp_constraint:constraint()}[0m) -> {'ok',pid()} | {'error',term()}[0m[0m
+Dialyzer starting, this may take a while...
+Updating plt...
+Resolving files...
+Updating base plt...
+Resolving files...
+Building with 166 files in "/root/.cache/rebar3/rebar3_20.3.8.5_plt"...
+Copying "/root/.cache/rebar3/rebar3_20.3.8.5_plt" to "/dp/_build/test/rebar3_20.3.8.5_plt"...
+Checking 166 files in "/dp/_build/test/rebar3_20.3.8.5_plt"...
+Adding 470 files to "/dp/_build/test/rebar3_20.3.8.5_plt"...
+Doing success typing analysis...
+Resolving files...
+Analyzing 29 files with "/dp/_build/test/rebar3_20.3.8.5_plt"...
 
-[4mapps/dp/src/[0;36m[4mdp_constraint[0m[4m.erl[0m[0m
-[0;36m 216[0m: [1mFunction [0;31mis_total_respected/2 [0m[1mhas no local return[0m[0m
-[0;36m 217[0m: [1mRecord construction [0m#constraint{total::'undefined',participant::'undefined',too_close_limit::'undefined',too_far_limit::'undefined',hard_limit::0}[1m violates the declared type of field [0mtotal::integer() and participant::string() and too_close_limit::integer() and too_far_limit::integer()[0m[0m
+apps/dp/src/dp.erl
+  46: The call dp:report_failure('debit', Participant::string(), Amount::number(), TxId::any(), Options::any(), Reject::{'reject',_}) breaks the contract (request(), participant(), amount(), transaction_id(), options(), {'rejected',term()}) -> {'rejected',term()}
+  56: The call dp:report_failure('credit', Participant::string(), Amount::integer(), TxId::any(), Options::any(), Reject::{'reject',_}) breaks the contract (request(), participant(), amount(), transaction_id(), options(), {'rejected',term()}) -> {'rejected',term()}
+  69: Invalid type specification for function dp:report_failure/6. The success typing is ('credit' | 'debit',string(),number(),_,_,{'reject',_}) -> {'reject',_}
 
-[4mapps/dp/src/[0;36m[4mdp_db[0m[4m.erl[0m[0m
-[0;36m  71[0m: [1mThe variable [0;31mErr[0m[1m can never match since previous clauses completely covered the type [0;32m'ok'[0m[0m
-[0;36m 134[0m: [1mFunction [0;31mare_totals_respected/0 [0m[1mhas no local return[0m[0m
-[0;36m 140[0m: [1mThe created fun [0m[1mhas no local return[0m[0m
-[0;36m 140[0m: [1mThe call[0m lists:all(fun((_) -> none()), [{_,_}]) [0m[1mwill never return since the success typing arguments are [0m(fun((_) -> boolean()),[any()])[0m[0m
-[0;36m 180[0m: [1mInvalid type specification for function[0m dp_db:init_funds/1.[1m The success typing is[0m ([boolean()]) -> maybe_improper_list()[0m[0m
-[0;36m 188[0m: [1mInvalid type specification for function[0m dp_db:init_fund/2.[1m The success typing is[0m ({string(),_,[{integer(),'=<' | '>=',integer(),integer(),integer()} | {integer(),'=<' | '>=',integer(),integer(),integer(),integer()},...]},[boolean(),...]) -> {string(),{{'constraint',integer(),[any()],'=<' | '>=',integer(),integer(),integer()},_}}[0m[0m
+apps/dp/src/dp_app.erl
+  22: The inferred return type of start/2 ({'stop',_}) has nothing in common with {'error',_} | {'ok',pid()} | {'ok',pid(),_}, which is the expected return type for the callback of application behaviour
+  56: The call dp_sup:start_link(NodeCandidates::[atom()], PartsConstraints::[{'constraint',integer(),string(),'=<' | '>=',integer(),integer(),integer()}]) breaks the contract ([node()], {dp:participant(),dp_constraint:constraint()}) -> {'ok',pid()} | {'error',term()}
 
-[4mapps/dp/src/[0;36m[4mdp_policy[0m[4m.erl[0m[0m
-[0;36m 335[0m: [1mThe pattern [0;31m{'ok', _}[0m[1m can never match the type [0;32m'ok' | {'reject',_}[0m[0m
-[0;36m 348[0m: [1mThe pattern [0;31m{{'reject', _}, NewAccLimitChange}[0m[1m can never match the type [0;32m'ok' | {'reject',_}[0m[0m
+apps/dp/src/dp_constraint.erl
+ 216: Function is_total_respected/2 has no local return
+ 217: Record construction #constraint{total::'undefined',participant::'undefined',too_close_limit::'undefined',too_far_limit::'undefined',hard_limit::0} violates the declared type of field total::integer() and participant::string() and too_close_limit::integer() and too_far_limit::integer()
 
-[4mapps/dp/src/[0;36m[4mdp_policy_halve_slack[0m[4m.erl[0m[0m
-[0;36m  28[0m: [1mThe return type [0m{'ok' | {'reject',_},integer()}[1m in the specification of [0mon_value_change_conflicts_limit/4[1m is not a subtype of [0m'ok' | {'reject',_}[1m, which is the expected return type for the callback of [0mdp_policy[1m behaviour[0m[0m
-[0;36m  30[0m: [1mThe inferred return type of[0m on_value_change_conflicts_limit/4 ({'ok' | {'reject',_},number()}) [1mhas nothing in common with[0m 'ok' | {'reject',_}, [1mwhich is the expected return type for the callback of[0m dp_policy [1mbehaviour[0m[0m
+apps/dp/src/dp_db.erl
+  71: The variable Err can never match since previous clauses completely covered the type 'ok'
+ 134: Function are_totals_respected/0 has no local return
+ 140: The created fun has no local return
+ 140: The call lists:all(fun((_) -> none()), [{_,_}]) will never return since the success typing arguments are (fun((_) -> boolean()),[any()])
+ 180: Invalid type specification for function dp_db:init_funds/1. The success typing is ([boolean()]) -> maybe_improper_list()
+ 188: Invalid type specification for function dp_db:init_fund/2. The success typing is ({string(),_,[{integer(),'=<' | '>=',integer(),integer(),integer()} | {integer(),'=<' | '>=',integer(),integer(),integer(),integer()},...]},[boolean(),...]) -> {string(),{{'constraint',integer(),[any()],'=<' | '>=',integer(),integer(),integer()},_}}
 
-[4mapps/dp/src/[0;36m[4mdp_protocol[0m[4m.erl[0m[0m
-[0;36m 123[0m: [1mInvalid type specification for function[0m dp_protocol:init/1.[1m The success typing is[0m ([any(),...]) -> {'stop',_}[0m[0m
-[0;36m 132[0m: [1mThe created fun [0m[1mhas no local return[0m[0m
-[0;36m 133[0m: [1mThe call[0m dp_protocol:handshake(Node::any(), Participant::string(), [0;31mLCInfo::[{dp_constraint:key(),integer()}][0m) [0m[1mbreaks the contract[0m (node(), dp:participant(), [0;32mconstraint_info()[0m) -> 'connected' | {'error',handshake_error_reason()}[0m[0m
-[0;36m 219[0m: [1mThe call[0m dp_protocol:publish_change([0;31m{'commit',{'partial',integer()}}[0m, Constraint::{'constraint',integer(),string(),'=<' | '>=',integer(),integer(),integer()}, PartialChange::integer(), State::any()) [0m[1mbreaks the contract[0m ([0;32mproto_result()[0m, dp_constraint:constraint(), dp:amount(), state()) -> {'reply',proto_result(),state()}[0m[0m
-[0;36m 241[0m: [1mThe call[0m dp_protocol:publish_change([0;31m{'delay',{'partial',_}}[0m, Constraint::{'constraint',integer(),string(),'=<' | '>=',integer(),integer(),integer()}, number(), State::#protocol_state{connected_nodes::[atom()],suspended::boolean()}) [0m[1mbreaks the contract[0m ([0;32mproto_result()[0m, dp_constraint:constraint(), dp:amount(), state()) -> {'reply',proto_result(),state()}[0m[0m
-[0;36m 276[0m: [1mCall to missing or unexported function [0mdp_db:get_all_local_limits/0[0m[0m
-[0;36m 333[0m: [1mInvalid type specification for function[0m dp_protocol:handshake_process_constraints/3.[1m The success typing is[0m (_,string(),[{_,_}]) -> 'ok' | {'error',{'conflicting_constraint',dp_constraint:key()}}[0m[0m
-[0;36m 353[0m: [1mInvalid type specification for function[0m dp_protocol:handshake_check_save_constraints/2.[1m The success typing is[0m (_,[{dp_constraint:key(),integer()}]) -> 'ok'[0m[0m
-[0;36m 359[0m: [1mThe pattern [0;31m{'error', _}[0m[1m can never match the type [0;32minteger()[0m[0m
+apps/dp/src/dp_policy.erl
+ 335: The pattern {'ok', _} can never match the type 'ok' | {'reject',_}
+ 348: The pattern {{'reject', _}, NewAccLimitChange} can never match the type 'ok' | {'reject',_}
 
-[4mapps/dp_dummy/src/[0;36m[4mdp_dummy[0m[4m.erl[0m[0m
-[0;36m  25[0m: [1mFunction [0;31mmetrics_name/2[0m[1m will never be called[0m[0m
+apps/dp/src/dp_policy_halve_slack.erl
+  28: The return type {'ok' | {'reject',_},integer()} in the specification of on_value_change_conflicts_limit/4 is not a subtype of 'ok' | {'reject',_}, which is the expected return type for the callback of dp_policy behaviour
+  30: The inferred return type of on_value_change_conflicts_limit/4 ({'ok' | {'reject',_},number()}) has nothing in common with 'ok' | {'reject',_}, which is the expected return type for the callback of dp_policy behaviour
 
-[4mapps/dp_dummy/src/[0;36m[4mdp_dummy_server[0m[4m.erl[0m[0m
-[0;36m  70[0m: [1mFunction [0;31mcheck_node/1[0m[1m will never be called[0m[0m
-[0;32m===> Warnings written to /home/nar/dp_poc/_build/test/20.1.dialyzer_warnings
-[0m[0;31m===> [1mWarnings occurred running dialyzer: 28
-[0m[0m
+apps/dp/src/dp_protocol.erl
+ 123: Invalid type specification for function dp_protocol:init/1. The success typing is ([any(),...]) -> {'stop',_}
+ 132: The created fun has no local return
+ 133: The call dp_protocol:handshake(Node::any(), Participant::string(), LCInfo::[{dp_constraint:key(),integer()}]) breaks the contract (node(), dp:participant(), constraint_info()) -> 'connected' | {'error',handshake_error_reason()}
+ 219: The call dp_protocol:publish_change({'commit',{'partial',integer()}}, Constraint::{'constraint',integer(),string(),'=<' | '>=',integer(),integer(),integer()}, PartialChange::integer(), State::any()) breaks the contract (proto_result(), dp_constraint:constraint(), dp:amount(), state()) -> {'reply',proto_result(),state()}
+ 241: The call dp_protocol:publish_change({'delay',{'partial',_}}, Constraint::{'constraint',integer(),string(),'=<' | '>=',integer(),integer(),integer()}, number(), State::#protocol_state{connected_nodes::[atom()],suspended::boolean()}) breaks the contract (proto_result(), dp_constraint:constraint(), dp:amount(), state()) -> {'reply',proto_result(),state()}
+ 276: Call to missing or unexported function dp_db:get_all_local_limits/0
+ 333: Invalid type specification for function dp_protocol:handshake_process_constraints/3. The success typing is (_,string(),[{_,_}]) -> 'ok' | {'error',{'conflicting_constraint',dp_constraint:key()}}
+ 353: Invalid type specification for function dp_protocol:handshake_check_save_constraints/2. The success typing is (_,[{dp_constraint:key(),integer()}]) -> 'ok'
+ 359: The pattern {'error', _} can never match the type integer()
+
+apps/dp_dummy/src/dp_dummy.erl
+  25: Function metrics_name/2 will never be called
+
+apps/dp_dummy/src/dp_dummy_server.erl
+  70: Function check_node/1 will never be called
+Warnings written to /dp/_build/test/20.3.8.5.dialyzer_warnings
+Warnings occurred running dialyzer: 28
