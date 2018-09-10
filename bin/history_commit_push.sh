@@ -7,7 +7,8 @@
 # this script 
 #
 set -x
-cd _build/test/lib/dashboard
+BIN_DIR=`dirname "$(readlink -f "$0")"`
+cd $BIN_DIR/..
 
 git config --local user.email "attila.nohl@erlang-solutions.com"
 git config --local user.name "Dashboard updater"
