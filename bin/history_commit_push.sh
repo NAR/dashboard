@@ -6,7 +6,7 @@
 # Assumption: Private key `updater.key` has been `ssh-add`-ed before running
 # this script 
 #
-
+set -x
 cd _build/test/lib/dashboard
 
 git config --local user.email "attila.nohl@erlang-solutions.com"
@@ -19,7 +19,7 @@ git pull origin
 git stash pop
 git add *
 git commit -m "Add job ${TRAVIS_JOB_ID} for ${PROJECT_NAME}"
-git push
+git push origin master
 
 cd -
 
