@@ -7,7 +7,7 @@
 # Param $3: If $1 is common_test or eunit, number of all tests. If $1 is build, the number of warnings
 # Param $4: If $1 is common_test, the number of skipped tests.
 #
-
+set -x
 if [ "$TRAVIS_BRANCH" != "master" ]; then
     echo "Not updating dashboard for $TRAVIS_BRANCH branch!"
     exit 0

@@ -3,7 +3,7 @@
 # Compiles the project and updates the dashboard with the number of
 # compilation warnings (or sets it to "failed" if there are errors).
 #
-
+set -x
 BIN_DIR=`dirname "$(readlink -f "$0")"`
 
 output_name="$BIN_DIR/../compile-output-${PROJECT_NAME}.txt"
