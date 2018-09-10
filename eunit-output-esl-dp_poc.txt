@@ -1,0 +1,85 @@
+[0;32m===> Verifying dependencies...
+[0m[0;32m===> Compiling dp_router
+[0mapps/dp_router/src/dp_router_server.erl:39: Warning: variable 'Nodes' is unused
+
+[0;32m===> Compiling dp_dummy
+[0mapps/dp_dummy/src/dp_dummy.erl:25: Warning: function metrics_name/2 is unused
+
+apps/dp_dummy/src/dp_dummy_server.erl:70: Warning: function check_node/1 is unused
+
+[0;32m===> Compiling dp_loader
+[0m[0;32m===> Compiling dp
+[0mapps/dp/src/dp_sup.erl:18: Warning: type constraints_per_participant() is unused
+
+_build/test/lib/dp/test/dp_metrics_SUITE.erl:11: Warning: export_all flag enabled - all functions will be exported
+
+[0;32m===> Compiling dp_shared_utils
+[0mapps/dp_shared_utils/src/dp_shared_utils_server.erl:54: Warning: variable 'Map' is unused
+
+apps/dp_shared_utils/src/dp_shared_utils.erl:56: Warning: variable 'Port' is unused
+
+[0;32m===> Performing EUnit tests...
+[0m/home/nar/dp_poc/_build/test/lib/dp/test/dp_constraint_tests.erl:23:<0.758.0>: Upper limit
+15:05:25.951 [info] Creating table fund on node ctnode9793@debian.
+15:05:25.953 [info] Creating table limit on node ctnode9793@debian.
+15:05:25.953 [info] initialising funds (Db: [true,true])
+15:05:25.951 [info] Application lager started on node ctnode9793@debian
+/home/nar/dp_poc/_build/test/lib/dp/test/dp_constraint_tests.erl:58:<0.758.0>: Lower limit
+[0;32m.[0m[0;32m.[0m
+=INFO REPORT==== 10-Sep-2018::15:05:25 ===
+    application: lager
+    exited: stopped
+    type: permanent
+15:05:25.993 [error] Table fund already exists on ctnode9793@debian
+15:05:25.993 [error] Table limit already exists on ctnode9793@debian
+15:05:25.993 [info] initialising funds (Db: [true,true])
+15:05:25.993 [info] Application lager started on node ctnode9793@debian
+15:05:26.052 [info] Application elarm started on node ctnode9793@debian
+/home/nar/dp_poc/_build/test/lib/dp/test/dp_db_tests.erl:24:<0.789.0>: Test funds Db
+/home/nar/dp_poc/_build/test/lib/dp/test/dp_db_tests.erl:45:<0.789.0>: Test limit Db
+[0;32m.[0m/home/nar/dp_poc/_build/test/lib/dp/test/dp_db_tests.erl:76:<0.789.0>: Test elarm on zeroed balance
+[0;32m.[0m[0;32m.[0m
+=INFO REPORT==== 10-Sep-2018::15:05:26 ===
+    application: lager
+    exited: stopped
+    type: permanent
+
+=INFO REPORT==== 10-Sep-2018::15:05:26 ===
+    application: elarm
+    exited: stopped
+    type: temporary
+15:05:26.154 [error] Table fund already exists on ctnode9793@debian
+15:05:26.154 [error] Table limit already exists on ctnode9793@debian
+15:05:26.154 [info] initialising funds (Db: [true,true])
+15:05:26.154 [info] Application lager started on node ctnode9793@debian
+15:05:26.258 [info] Connected nodes: []
+15:05:26.282 [error] Error calling remote node: {nodedown,dummynode}
+[0;32m.[0m15:05:26.388 [error] Error calling remote node: {nodedown,dummynode}
+[0;32m.[0m
+=INFO REPORT==== 10-Sep-2018::15:05:26 ===
+    application: lager
+    exited: stopped
+    type: permanent
+[0;32m.[0m
+
+Top 8 slowest tests (0.238 seconds, 29.7% of total time):
+  dp_protocol_tests:protocol_test_/0: Upper limit
+[0;36m    0.123 seconds[0m
+  dp_protocol_tests:protocol_test_/0: Lower limit
+[0;36m    0.104 seconds[0m
+  dp_db_tests:protocol_test_/0: Test elarm on zeroed balance
+[0;36m    0.009 seconds[0m
+  dp_db_tests:protocol_test_/0: Test fund Db
+[0;36m    0.001 seconds[0m
+  dp_db_tests:protocol_test_/0: Test limit Db
+[0;36m    0.001 seconds[0m
+  dp_constraint_tests:limit_test_/0: Upper limit
+[0;36m    0.000 seconds[0m
+  dp_policy_SUITE:counter_test/0: module 'dp_policy_SUITE'
+[0;36m    0.000 seconds[0m
+  dp_constraint_tests:limit_test_/0: Lower limit
+[0;36m    0.000 seconds[0m
+
+Finished in 0.801 seconds
+[0;32m8 tests, 0 failures
+[0m

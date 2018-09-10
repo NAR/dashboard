@@ -1,0 +1,30 @@
+[0;32m===> Verifying dependencies...
+[0m[0;32m===> Compiling bear
+[0m_build/default/lib/bear/src/bear.erl:28: Warning: export_all flag enabled - all functions will be exported
+
+[0;32m===> Compiling folsom
+[0m[0;32m===> Compiling goldrush
+[0m[0;32m===> Compiling lager
+[0m[0;32m===> Compiling ssl_verify_fun
+[0m[0;32m===> Compiling hut
+[0m[0;32m===> Compiling gen_rpc
+[0m[0;32m===> Compiling parse_trans
+[0m[0;32m===> Compiling exometer_core
+[0m[0;32m===> Compiling elarm
+[0m[0;32m===> Compiling dp_router
+[0mapps/dp_router/src/dp_router_server.erl:39: Warning: variable 'Nodes' is unused
+
+[0;32m===> Compiling dp_dummy
+[0mapps/dp_dummy/src/dp_dummy.erl:25: Warning: function metrics_name/2 is unused
+
+apps/dp_dummy/src/dp_dummy_server.erl:70: Warning: function check_node/1 is unused
+
+[0;32m===> Compiling dp_loader
+[0m[0;32m===> Compiling dp
+[0mapps/dp/src/dp_sup.erl:18: Warning: type constraints_per_participant() is unused
+
+[0;32m===> Compiling dp_shared_utils
+[0mapps/dp_shared_utils/src/dp_shared_utils_server.erl:54: Warning: variable 'Map' is unused
+
+apps/dp_shared_utils/src/dp_shared_utils.erl:56: Warning: variable 'Port' is unused
+

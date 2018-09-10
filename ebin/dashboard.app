@@ -1,0 +1,8 @@
+{application,dashboard,
+             [{description,"Dummy erlang app for CI dashboard"},
+              {vsn,"0.1"},
+              {registered,[]},
+              {modules,[]},
+              {applications,[]},
+              {mod,{dashboard_app,[]}},
+              {env,[]}]}.

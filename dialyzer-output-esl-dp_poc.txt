@@ -1,0 +1,83 @@
+[0;32m===> Verifying dependencies...
+[0m[0;32m===> Compiling meck
+[0m[0;32m===> Compiling dashboard
+[0m[0;32m===> Compiling dp_router
+[0mapps/dp_router/src/dp_router_server.erl:39: Warning: variable 'Nodes' is unused
+
+[0;32m===> Compiling dp_dummy
+[0mapps/dp_dummy/src/dp_dummy.erl:25: Warning: function metrics_name/2 is unused
+
+apps/dp_dummy/src/dp_dummy_server.erl:70: Warning: function check_node/1 is unused
+
+[0;32m===> Compiling dp_loader
+[0m[0;32m===> Compiling dp
+[0mapps/dp/src/dp_sup.erl:18: Warning: type constraints_per_participant() is unused
+
+_build/test/lib/dp/test/dp_metrics_SUITE.erl:11: Warning: export_all flag enabled - all functions will be exported
+
+[0;32m===> Compiling dp_shared_utils
+[0mapps/dp_shared_utils/src/dp_shared_utils_server.erl:54: Warning: variable 'Map' is unused
+
+apps/dp_shared_utils/src/dp_shared_utils.erl:56: Warning: variable 'Port' is unused
+
+[0;32m===> Dialyzer starting, this may take a while...
+[0m[0;32m===> Updating plt...
+[0m[0;32m===> Resolving files...
+[0m[0;32m===> Updating base plt...
+[0m[0;32m===> Resolving files...
+[0m[0;32m===> Checking 166 files in "/home/nar/.cache/rebar3/rebar3_20.1_plt"...
+[0m[0;32m===> Copying "/home/nar/.cache/rebar3/rebar3_20.1_plt" to "/home/nar/dp_poc/_build/test/rebar3_20.1_plt"...
+[0m[0;32m===> Checking 166 files in "/home/nar/dp_poc/_build/test/rebar3_20.1_plt"...
+[0m[0;32m===> Adding 473 files to "/home/nar/dp_poc/_build/test/rebar3_20.1_plt"...
+[0m[0;32m===> Doing success typing analysis...
+[0m[0;32m===> Resolving files...
+[0m[0;32m===> Analyzing 29 files with "/home/nar/dp_poc/_build/test/rebar3_20.1_plt"...
+[0m
+[4mapps/dp/src/[0;36m[4mdp[0m[4m.erl[0m[0m
+[0;36m  46[0m: [1mThe call[0m dp:report_failure('debit', Participant::string(), Amount::number(), TxId::any(), Options::any(), [0;31mReject::{'reject',_}[0m) [0m[1mbreaks the contract[0m (request(), participant(), amount(), transaction_id(), options(), [0;32m{'rejected',term()}[0m) -> {'rejected',term()}[0m[0m
+[0;36m  56[0m: [1mThe call[0m dp:report_failure('credit', Participant::string(), Amount::integer(), TxId::any(), Options::any(), [0;31mReject::{'reject',_}[0m) [0m[1mbreaks the contract[0m (request(), participant(), amount(), transaction_id(), options(), [0;32m{'rejected',term()}[0m) -> {'rejected',term()}[0m[0m
+[0;36m  69[0m: [1mInvalid type specification for function[0m dp:report_failure/6.[1m The success typing is[0m ('credit' | 'debit',string(),number(),_,_,{'reject',_}) -> {'reject',_}[0m[0m
+
+[4mapps/dp/src/[0;36m[4mdp_app[0m[4m.erl[0m[0m
+[0;36m  22[0m: [1mThe inferred return type of[0m start/2 ({'stop',_}) [1mhas nothing in common with[0m {'error',_} | {'ok',pid()} | {'ok',pid(),_}, [1mwhich is the expected return type for the callback of[0m application [1mbehaviour[0m[0m
+[0;36m  56[0m: [1mThe call[0m dp_sup:start_link(NodeCandidates::[atom()], [0;31mPartsConstraints::[{'constraint',integer(),string(),'=<' | '>=',integer(),integer(),integer()}][0m) [0m[1mbreaks the contract[0m ([node()], [0;32m{dp:participant(),dp_constraint:constraint()}[0m) -> {'ok',pid()} | {'error',term()}[0m[0m
+
+[4mapps/dp/src/[0;36m[4mdp_constraint[0m[4m.erl[0m[0m
+[0;36m 216[0m: [1mFunction [0;31mis_total_respected/2 [0m[1mhas no local return[0m[0m
+[0;36m 217[0m: [1mRecord construction [0m#constraint{total::'undefined',participant::'undefined',too_close_limit::'undefined',too_far_limit::'undefined',hard_limit::0}[1m violates the declared type of field [0mtotal::integer() and participant::string() and too_close_limit::integer() and too_far_limit::integer()[0m[0m
+
+[4mapps/dp/src/[0;36m[4mdp_db[0m[4m.erl[0m[0m
+[0;36m  71[0m: [1mThe variable [0;31mErr[0m[1m can never match since previous clauses completely covered the type [0;32m'ok'[0m[0m
+[0;36m 134[0m: [1mFunction [0;31mare_totals_respected/0 [0m[1mhas no local return[0m[0m
+[0;36m 140[0m: [1mThe created fun [0m[1mhas no local return[0m[0m
+[0;36m 140[0m: [1mThe call[0m lists:all(fun((_) -> none()), [{_,_}]) [0m[1mwill never return since the success typing arguments are [0m(fun((_) -> boolean()),[any()])[0m[0m
+[0;36m 180[0m: [1mInvalid type specification for function[0m dp_db:init_funds/1.[1m The success typing is[0m ([boolean()]) -> maybe_improper_list()[0m[0m
+[0;36m 188[0m: [1mInvalid type specification for function[0m dp_db:init_fund/2.[1m The success typing is[0m ({string(),_,[{integer(),'=<' | '>=',integer(),integer(),integer()} | {integer(),'=<' | '>=',integer(),integer(),integer(),integer()},...]},[boolean(),...]) -> {string(),{{'constraint',integer(),[any()],'=<' | '>=',integer(),integer(),integer()},_}}[0m[0m
+
+[4mapps/dp/src/[0;36m[4mdp_policy[0m[4m.erl[0m[0m
+[0;36m 335[0m: [1mThe pattern [0;31m{'ok', _}[0m[1m can never match the type [0;32m'ok' | {'reject',_}[0m[0m
+[0;36m 348[0m: [1mThe pattern [0;31m{{'reject', _}, NewAccLimitChange}[0m[1m can never match the type [0;32m'ok' | {'reject',_}[0m[0m
+
+[4mapps/dp/src/[0;36m[4mdp_policy_halve_slack[0m[4m.erl[0m[0m
+[0;36m  28[0m: [1mThe return type [0m{'ok' | {'reject',_},integer()}[1m in the specification of [0mon_value_change_conflicts_limit/4[1m is not a subtype of [0m'ok' | {'reject',_}[1m, which is the expected return type for the callback of [0mdp_policy[1m behaviour[0m[0m
+[0;36m  30[0m: [1mThe inferred return type of[0m on_value_change_conflicts_limit/4 ({'ok' | {'reject',_},number()}) [1mhas nothing in common with[0m 'ok' | {'reject',_}, [1mwhich is the expected return type for the callback of[0m dp_policy [1mbehaviour[0m[0m
+
+[4mapps/dp/src/[0;36m[4mdp_protocol[0m[4m.erl[0m[0m
+[0;36m 123[0m: [1mInvalid type specification for function[0m dp_protocol:init/1.[1m The success typing is[0m ([any(),...]) -> {'stop',_}[0m[0m
+[0;36m 132[0m: [1mThe created fun [0m[1mhas no local return[0m[0m
+[0;36m 133[0m: [1mThe call[0m dp_protocol:handshake(Node::any(), Participant::string(), [0;31mLCInfo::[{dp_constraint:key(),integer()}][0m) [0m[1mbreaks the contract[0m (node(), dp:participant(), [0;32mconstraint_info()[0m) -> 'connected' | {'error',handshake_error_reason()}[0m[0m
+[0;36m 219[0m: [1mThe call[0m dp_protocol:publish_change([0;31m{'commit',{'partial',integer()}}[0m, Constraint::{'constraint',integer(),string(),'=<' | '>=',integer(),integer(),integer()}, PartialChange::integer(), State::any()) [0m[1mbreaks the contract[0m ([0;32mproto_result()[0m, dp_constraint:constraint(), dp:amount(), state()) -> {'reply',proto_result(),state()}[0m[0m
+[0;36m 241[0m: [1mThe call[0m dp_protocol:publish_change([0;31m{'delay',{'partial',_}}[0m, Constraint::{'constraint',integer(),string(),'=<' | '>=',integer(),integer(),integer()}, number(), State::#protocol_state{connected_nodes::[atom()],suspended::boolean()}) [0m[1mbreaks the contract[0m ([0;32mproto_result()[0m, dp_constraint:constraint(), dp:amount(), state()) -> {'reply',proto_result(),state()}[0m[0m
+[0;36m 276[0m: [1mCall to missing or unexported function [0mdp_db:get_all_local_limits/0[0m[0m
+[0;36m 333[0m: [1mInvalid type specification for function[0m dp_protocol:handshake_process_constraints/3.[1m The success typing is[0m (_,string(),[{_,_}]) -> 'ok' | {'error',{'conflicting_constraint',dp_constraint:key()}}[0m[0m
+[0;36m 353[0m: [1mInvalid type specification for function[0m dp_protocol:handshake_check_save_constraints/2.[1m The success typing is[0m (_,[{dp_constraint:key(),integer()}]) -> 'ok'[0m[0m
+[0;36m 359[0m: [1mThe pattern [0;31m{'error', _}[0m[1m can never match the type [0;32minteger()[0m[0m
+
+[4mapps/dp_dummy/src/[0;36m[4mdp_dummy[0m[4m.erl[0m[0m
+[0;36m  25[0m: [1mFunction [0;31mmetrics_name/2[0m[1m will never be called[0m[0m
+
+[4mapps/dp_dummy/src/[0;36m[4mdp_dummy_server[0m[4m.erl[0m[0m
+[0;36m  70[0m: [1mFunction [0;31mcheck_node/1[0m[1m will never be called[0m[0m
+[0;32m===> Warnings written to /home/nar/dp_poc/_build/test/20.1.dialyzer_warnings
+[0m[0;31m===> [1mWarnings occurred running dialyzer: 28
+[0m[0m
